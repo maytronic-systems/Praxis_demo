@@ -1,0 +1,63 @@
+:root{--ink:#17343b;--muted:#64777b;--primary:#287b78;--primary-dark:#1f6563;--soft:#eef7f5;--cream:#f8f7f2;--line:#dce7e5}html{scroll-behavior:smooth;font-size:18px}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}.container{width:calc(100% - 2rem);max-width:1160px!important;margin-left:auto!important;margin-right:auto!important;padding-left:0!important;padding-right:0!important}.navbar{min-height:78px}.navbar-brand{display:flex;align-items:center;gap:.65rem;color:var(--ink)}.navbar-brand small{display:block;font-size:.66rem;font-weight:500;color:var(--muted)}.brand-mark{width:42px;height:42px;border-radius:50% 50% 50% 10%;display:grid;place-items:center;background:var(--primary);color:white;font-weight:800}.nav-link{color:var(--ink);font-weight:600}.btn{border-radius:.7rem;font-weight:700;padding:.72rem 1rem}.btn-primary{background:var(--primary);border-color:var(--primary)}.btn-primary:hover{background:var(--primary-dark);border-color:var(--primary-dark)}.intro{padding:4.5rem 0 3.5rem;background:linear-gradient(135deg,#fff 30%,var(--soft))}.eyebrow{text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:var(--primary);font-size:.76rem}.intro h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.02;letter-spacing:-.045em;margin:.6rem 0 1.2rem}.intro h1 span{color:var(--primary)}.lead{max-width:700px;color:#52686d;font-size:1.15rem}.hero-card{background:white;border-radius:1.4rem;padding:.7rem;box-shadow:0 20px 55px rgba(23,52,59,.11)}.hero-placeholder{aspect-ratio:4/3;border-radius:1rem;background:linear-gradient(135deg,#d9ece8,#b9d9d3);display:grid;place-items:center;color:#557672;font-weight:700}.hero-note{padding:1rem .7rem .5rem}.hero-note span{color:var(--muted)}.booking-section{padding:4.5rem 0;background:var(--cream);scroll-margin-top:80px}.booking-heading{max-width:760px;margin:0 auto 2rem}.booking-heading h2,.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.03em}.booking-shell{max-width:920px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:1.2rem;overflow:hidden;box-shadow:0 12px 40px rgba(23,52,59,.07)}.booking-top{display:flex;align-items:center;gap:.55rem;padding:.9rem 1rem;border-bottom:1px solid var(--line)}.status-dot{width:10px;height:10px;background:#4ba47b;border-radius:50%}.lemniscus-placeholder{min-height:430px;display:grid;place-items:center;text-align:center;padding:2rem;background:repeating-linear-gradient(135deg,#fff,#fff 14px,#fbfdfc 14px,#fbfdfc 28px)}.lemniscus-placeholder>div{max-width:520px}.calendar-icon{margin:0 auto 1rem;width:64px;height:64px;border-radius:15px;background:var(--soft);display:grid;place-items:center;color:var(--primary);font-size:1.4rem;font-weight:900}.section-head{margin-bottom:1.5rem}.service-card{height:100%;display:block;text-decoration:none;color:var(--ink);padding:1.5rem;border:1px solid var(--line);border-radius:1rem;transition:.2s}.service-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(23,52,59,.08);border-color:#b8d6d2}.service-card h3{font-size:1.3rem;margin-top:1rem}.service-card p{color:var(--muted)}.service-card>span:last-child{color:var(--primary);font-weight:800}.service-icon{font-size:.8rem;font-weight:900;background:var(--soft);color:var(--primary);padding:.35rem .55rem;border-radius:.5rem}.info-band{background:var(--ink);color:white;padding:2.7rem 0}.info-band p{color:#d7e2e3;margin:.4rem 0 0}footer{background:#10282e;color:white;padding:2.6rem 0 1rem}.footer-main{display:flex;justify-content:space-between;gap:2rem}.footer-main p,.footer-bottom{color:#aebfc2}.footer-links{display:flex;flex-wrap:wrap;gap:1rem}.footer-links a,.footer-bottom a{color:#dbe6e7;text-decoration:none}.footer-bottom{border-top:1px solid #365057;margin-top:2rem;padding-top:1rem;display:flex;justify-content:space-between;font-size:.78rem}.mobile-book{display:none}.page-hero{padding:3.5rem 0;background:var(--soft)}.page-content{padding:3.5rem 0}.placeholder-block{padding:1.5rem;border:1px solid var(--line);border-radius:1rem;margin-bottom:1rem}.legal{max-width:850px}.legal h2{margin-top:2rem;font-size:1.35rem}.notice{background:#fff8dd;border-left:4px solid #d8a72c;padding:1rem;border-radius:.4rem}
+@media(max-width:767.98px){html{font-size:17px}.navbar{min-height:68px}.navbar-brand small{display:none}.intro{padding:2.3rem 0}.intro h1{font-size:2.65rem}.lead{font-size:1.05rem}.hero-card{margin-top:.5rem}.booking-section{padding:3rem 0}.booking-shell{border-radius:.8rem}.booking-top .small{display:none}.lemniscus-placeholder{min-height:400px;padding:1.2rem}.footer-main,.footer-bottom{flex-direction:column}.mobile-book{display:block;position:fixed;z-index:1030;bottom:14px;left:14px;right:14px}.mobile-book a{display:block;text-align:center;background:var(--primary);color:#fff;text-decoration:none;padding:.9rem;border-radius:.8rem;font-weight:800;box-shadow:0 8px 25px rgba(0,0,0,.2)}body{padding-bottom:74px}.info-band{text-align:center}}
+
+/* Compact landing hero: content left, practice image fixed to the right */
+.intro{position:relative;overflow:hidden;padding:2.65rem 0 2.35rem;min-height:390px;display:flex;align-items:center;background:linear-gradient(100deg,#fff 0%,#fff 45%,var(--soft) 100%)}
+.intro .container{z-index:2}
+.intro-copy{position:relative;z-index:2;max-width:650px;padding-right:1rem}
+.intro h1{font-size:clamp(2.35rem,5vw,4.35rem);margin:.45rem 0 .8rem}
+.intro .lead{max-width:610px;margin-bottom:1.1rem}
+.hero-visual{position:absolute;z-index:1;top:0;right:0;width:48%;height:100%;display:grid;place-items:center;background:linear-gradient(135deg,#d9ece8,#b9d9d3);color:#557672;font-weight:700;letter-spacing:.02em;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 10%,#000 32%,#000 100%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.18) 10%,#000 32%,#000 100%)}
+.hero-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08),transparent 45%)}
+.booking-section{padding:3.25rem 0 3.5rem}
+.booking-heading{margin-bottom:1.35rem}
+.booking-heading p{margin-bottom:0}
+
+@media(max-width:991.98px) and (min-width:768px){
+  .intro-copy{max-width:59%}
+  .hero-visual{width:48%}
+  .intro h1{font-size:3rem}
+  .intro .lead{font-size:1rem}
+}
+
+@media(max-width:767.98px){
+  .intro{min-height:0;padding:1.55rem 0 1.45rem;background:linear-gradient(135deg,#fff 35%,var(--soft))}
+  .hero-visual{display:none}
+  .intro-copy{max-width:none;padding-right:0}
+  .intro h1{font-size:2.3rem;margin:.3rem 0 .55rem}
+  .intro .lead{font-size:1rem;line-height:1.5;margin-bottom:.9rem}
+  .intro .btn-lg{font-size:.98rem;padding:.65rem .8rem}
+  .booking-section{padding:2rem 0 2.5rem}
+  .booking-heading{margin-bottom:1rem}
+  .booking-heading h2{font-size:1.75rem;margin:.25rem 0 .4rem}
+  .booking-heading p{font-size:.95rem;line-height:1.45}
+}
+
+
+/* Bootstrap-Studio-safe navigation: horizontal on desktop without list bullets */
+.navbar .navbar-collapse{justify-content:flex-end}
+.navbar .navbar-nav{display:flex;flex-direction:row;align-items:center;gap:.35rem;list-style:none;margin:0 0 0 auto;padding:0}
+.navbar .navbar-nav>li{list-style:none;margin:0;padding:0}
+.navbar .navbar-nav .nav-link{display:block;padding:.55rem .7rem;white-space:nowrap;text-decoration:none}
+.navbar .navbar-nav .btn{white-space:nowrap}
+
+/* Actual practice photo. Container defines the crop, image fills it. */
+.hero-visual{display:block}
+.hero-visual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center right}
+
+@media(max-width:991.98px){
+  .navbar .navbar-collapse.show .navbar-nav,
+  .navbar .navbar-collapse.collapsing .navbar-nav{flex-direction:column;align-items:stretch;gap:.15rem;margin:.65rem 0 0}
+  .navbar .navbar-collapse.show .navbar-nav .btn,
+  .navbar .navbar-collapse.collapsing .navbar-nav .btn{display:block;text-align:center;margin:.35rem 0 0!important}
+}
+
+
+/* Stable centered page width, independent of Bootstrap Studio preview quirks */
+.container{box-sizing:border-box}
+
+/* Maytronic reference in footer */
+.footer-credit{display:flex;align-items:center;gap:.45rem;color:#aebfc2;text-decoration:none;white-space:nowrap}
+.footer-credit:hover{color:#fff}
+.footer-credit img{display:block;width:190px;height:auto;max-width:42vw}
+@media(max-width:767.98px){.footer-credit{white-space:normal}.footer-credit img{width:175px;max-width:70vw}}
