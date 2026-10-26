@@ -227,3 +227,229 @@
   .treatment-right::after{display:none}
   .treatments-cta{padding:2.3rem 1rem}
 }
+
+
+/* Postpartum home visits */
+.postpartum-section{
+  padding:5.3rem 0;
+  background:linear-gradient(180deg,var(--paper) 0%,#f6eee5 100%);
+  scroll-margin-top:95px;
+}
+.postpartum-feature{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr);
+  align-items:center;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid #e7d9cc;
+  border-radius:2.4rem;
+  background:#f2e6dc;
+  box-shadow:0 25px 70px rgba(70,62,49,.1);
+}
+.postpartum-feature::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-11%;
+  bottom:-35%;
+  width:65%;
+  height:115%;
+  background:radial-gradient(ellipse at center,rgba(255,253,249,.8),transparent 70%);
+  pointer-events:none;
+}
+.postpartum-art{
+  position:absolute;
+  z-index:0;
+  width:370px;
+  height:510px;
+  left:-205px;
+  top:-120px;
+  transform:rotate(-18deg);
+  border:1px solid rgba(125,140,120,.29);
+  border-radius:58% 42% 66% 34% / 43% 66% 34% 57%;
+  box-shadow:35px 35px 0 6px rgba(255,253,249,.18);
+  pointer-events:none;
+}
+.postpartum-copy{
+  position:relative;
+  z-index:1;
+  padding:3.75rem clamp(1.75rem,4.4vw,4.6rem);
+}
+.postpartum-copy h2{
+  margin:.6rem 0 1.5rem;
+  font-size:clamp(2.45rem,4.7vw,4.2rem);
+  line-height:1.1;
+  color:#4d554c;
+}
+.postpartum-copy h2 em{
+  display:block;
+  margin-top:.25rem;
+  font-size:.79em;
+  line-height:1.14;
+  color:var(--sage-dark);
+  font-weight:400;
+}
+.postpartum-copy p{
+  max-width:660px;
+  color:#5c6259;
+}
+.postpartum-copy .btn{
+  margin-top:.5rem;
+}
+.postpartum-details{
+  position:relative;
+  z-index:1;
+  margin:2.4rem 2.4rem 2.4rem 0;
+  padding:2.8rem 2.2rem 2.5rem;
+  background:rgba(255,253,249,.9);
+  border:1px solid rgba(222,215,203,.9);
+  border-radius:48% 48% 1.8rem 1.8rem / 9% 9% 1.8rem 1.8rem;
+  box-shadow:0 12px 45px rgba(70,62,49,.07);
+}
+.postpartum-details h3{
+  margin:.5rem 0 1.6rem;
+  font-size:clamp(1.65rem,2.5vw,2.35rem);
+  line-height:1.15;
+}
+.postpartum-fact{
+  padding:1.05rem 0;
+  border-top:1px solid var(--line);
+}
+.postpartum-fact strong{
+  color:var(--sage-dark);
+  font-size:.97rem;
+}
+.postpartum-fact p{
+  margin:.4rem 0 0;
+  color:#676d64;
+  font-size:.93rem;
+  line-height:1.65;
+}
+.postpartum-seal{
+  display:block;
+  width:max-content;
+  margin:1.4rem auto 0;
+  padding:.6rem 1.15rem;
+  border:1px solid rgba(95,110,92,.4);
+  border-radius:50%;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.07rem;
+  font-style:italic;
+  color:var(--sage-dark);
+  transform:rotate(-6deg);
+}
+.service-card h3{
+  margin:.2rem 0 .65rem;
+}
+.qualification-groups{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:1.5rem;
+  max-width:940px;
+}
+.qualification-group{
+  padding:1.7rem 1.9rem 1.9rem;
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:1.5rem;
+}
+.qualification-group h3{
+  margin:0 0 1.2rem;
+  font-size:1.6rem;
+  color:var(--sage-dark);
+}
+.qualification-group .qualifications{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:.6rem;
+  margin:0;
+}
+.qualification-group .qualification{
+  position:relative;
+  padding:.72rem 1rem .72rem 2rem;
+  background:var(--paper);
+  border-radius:.8rem;
+  line-height:1.55;
+}
+.qualification-group .qualification::before{
+  content:"";
+  position:absolute;
+  left:.9rem;
+  top:1.25rem;
+  width:.4rem;
+  height:.4rem;
+  border-radius:50%;
+  background:var(--sage);
+}
+.practice-address{
+  display:grid;
+  gap:.15rem;
+  margin:1.2rem 0 1.5rem;
+  font-style:normal;
+  font-size:1.08rem;
+}
+.practice-address strong{
+  font-weight:700;
+}
+.treatment-inline-link{
+  display:inline-flex;
+  gap:.4rem;
+  align-items:center;
+  margin-top:1.5rem;
+  padding:.9rem 1.25rem;
+  border:1px solid rgba(95,110,92,.35);
+  border-radius:1rem;
+  background:#eef1eb;
+  font-weight:650;
+  text-decoration:none;
+  color:var(--sage-dark);
+  transition:background .2s ease,transform .2s ease;
+}
+.treatment-inline-link:hover,
+.treatment-inline-link:focus-visible{
+  background:#e0e8dc;
+  color:#40543c;
+  transform:translateY(-2px);
+}
+@media(max-width:991.98px){
+  .postpartum-feature{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .postpartum-copy{
+    padding:3rem 2.5rem 1rem;
+  }
+  .postpartum-details{
+    margin:1rem 2.5rem 2.5rem;
+    border-radius:2rem;
+  }
+}
+@media(max-width:767.98px){
+  .postpartum-section{
+    padding:3rem 0;
+  }
+  .postpartum-feature{
+    border-radius:1.6rem;
+  }
+  .postpartum-copy{
+    padding:2.25rem 1.35rem 1rem;
+  }
+  .postpartum-copy h2{
+    font-size:clamp(2.15rem,9vw,3rem);
+  }
+  .postpartum-details{
+    margin:.6rem 1rem 1rem;
+    padding:1.9rem 1.3rem;
+    border-radius:1.5rem;
+  }
+  .qualification-group{
+    padding:1.3rem 1rem;
+    border-radius:1.1rem;
+  }
+  .qualification-group h3{
+    font-size:1.4rem;
+  }
+  .treatment-inline-link{
+    display:flex;
+  }
+}
