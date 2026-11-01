@@ -10,6 +10,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/logo%20WS.svg">
     <link rel="stylesheet" href="assets/style.css">
+    <!-- Offizielle lemniscus my/OT-Einbettung: Buchungsdaten werden direkt bei lemniscus verarbeitet. -->
+    <script type="text/javascript">
+      var pssConfig = {
+        host: "https://my.lemniscus.de",
+        token: "ea1f3260-634b-41db-aeab-2b932a20cb21",
+        showMainVideoTeaser: false,
+        showTermineTeaser: false,
+        showFooter: false
+      };
+      document.write("<script type='text/javascript' src='" + pssConfig.host +
+        "/lem/app.nocache-pss.js?v=" + Date.now() + "'><\\/script>");
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top border-bottom">
@@ -242,7 +254,7 @@
               Dein Termin in wenigen Schritten
             </h2>
             <p>
-              Die Online-Terminvergabe wird über Lemniscus eingebunden. Sobald die Praxis-Konfiguration freigegeben ist, kann hier direkt gebucht werden.
+              Wähle hier deine Behandlung und einen passenden Termin aus. Die Buchung bleibt direkt auf dieser Seite.
             </p>
           </div>
           <div class="booking-shell">
@@ -256,21 +268,17 @@
                 powered by lemniscus
               </span>
             </div>
-            <div id="pss" class="lemniscus-placeholder">
-              <div>
-                <div class="calendar-icon">
-                  31
-                </div>
-                <h3>
-                  Lemniscus Terminbuchung
-                </h3>
-                <p>
-                  Platzhalter für die finale Einbindung der Praxis.
-                </p>
-                <button class="btn btn-primary" disabled>
-                  Termin auswählen
-                </button>
-              </div>
+            <p class="booking-small-screen-hint">Auf einem sehr schmalen Bildschirm kannst du die Terminbuchung bei Bedarf seitlich verschieben.</p>
+            <div class="booking-embed-scroll" role="region" aria-label="Online-Terminbuchung" tabindex="0">
+              <div id="pss"></div>
+            </div>
+            <div class="booking-help">
+              <p>Wird noch kein freier Termin angeboten? Dann kannst du mir gerne <a href="kontakt.html">eine Nachricht schicken</a>.</p>
+              <details>
+                <summary>Die Terminbuchung wird nicht richtig angezeigt?</summary>
+                <p>Du kannst die Buchung alternativ <a href="https://my.lemniscus.de/pss.html?token=ea1f3260-634b-41db-aeab-2b932a20cb21" target="_blank" rel="noopener noreferrer">direkt bei lemniscus öffnen</a>.</p>
+              </details>
+              <noscript><p>Für die Online-Terminbuchung muss JavaScript aktiviert sein. Alternativ kannst du die <a href="https://my.lemniscus.de/pss.html?token=ea1f3260-634b-41db-aeab-2b932a20cb21">Terminbuchung bei lemniscus öffnen</a>.</p></noscript>
             </div>
           </div>
           <p class="small text-center text-muted mt-3 mb-0">
