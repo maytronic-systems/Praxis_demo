@@ -468,3 +468,23 @@
 .booking-help a{text-underline-offset:3px}
 @media(max-width:767.98px){#pss{padding:.9rem .8rem 1.3rem}.booking-help{padding:1rem}}
 @media(max-width:399.98px){.booking-small-screen-hint{display:block;margin:0;padding:.75rem 1rem;font-size:.84rem;color:var(--muted);background:var(--cream)}}
+
+/* Anamnesebögen – druckfähige PDF-Formulare, ohne Server-Upload */
+.anamnesis-intro{max-width:780px;color:#62675f}
+.anamnesis-card{display:flex;flex-direction:column;gap:.8rem;height:100%;padding:1.7rem;border-radius:1.25rem;border:1px solid var(--line);background:var(--paper);box-shadow:0 8px 28px rgba(70,62,49,.04)}
+.anamnesis-card h3{font-size:1.8rem;margin:0}
+.anamnesis-card p{color:var(--muted);margin:0;flex-grow:1}
+.anamnesis-type{font-size:.73rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--sage-dark)}
+.anamnesis-pages{font-size:.85rem;color:var(--muted)}
+.anamnesis-card .btn{white-space:normal;min-height:48px;display:flex;align-items:center;justify-content:center}
+.anamnesis-print-link{font-size:.86rem;text-align:center;line-height:1.4}
+.anamnesis-details{border-top:1px solid var(--line);padding-top:.8rem;font-size:.85rem}
+.anamnesis-details summary{font-weight:650;cursor:pointer;color:var(--sage-dark)}
+.anamnesis-details a{display:block;margin-top:.5rem}
+.anamnesis-notice{padding:1rem 1.25rem;background:var(--cream);border-left:3px solid var(--sage);border-radius:.65rem;color:#596259;font-size:.93rem}
+.anamnesis-editor{scroll-margin-top:95px}
+.anamnesis-editor[hidden]{display:none!important}
+.anamnesis-editor h2{font-size:2.25rem;margin:.35rem 0 0}
+.anamnesis-viewer{height:min(78vh,950px);min-height:520px;background:#e6e3dc;border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+.anamnesis-viewer iframe{width:100%;height:100%;border:0}
+@media(max-width:767px){.anamnesis-card{padding:1.3rem}.anamnesis-viewer{display:none}}
