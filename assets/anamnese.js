@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const close = document.getElementById("anamnesis-close");
   const isSmallScreen = window.matchMedia("(max-width: 767px)");
   const allowed = new Set([
-    "assets/anamnese/Anamnese_Erwachsene_Komplett_Julia_Widera-Krieb.pdf",
+    "assets/anamnese/Anamnese_Erwachsene_Julia_Widera-Krieb.pdf",
+    "assets/anamnese/Anamnese_Anhang_Erwachsene_Julia_Widera-Krieb.pdf",
     "assets/anamnese/Anamnese_Kinder_Julia_Widera-Krieb.pdf",
     "assets/anamnese/Anamnese_Saeuglinge_Julia_Widera-Krieb.pdf"
   ]);
