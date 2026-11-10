@@ -39,7 +39,7 @@
             </small>
           </span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Menü öffnen">
           <span class="navbar-toggler-icon">
           </span>
         </button>
@@ -61,12 +61,12 @@
               </a>
             </li>
             <li>
-              <li>
               <a class="nav-link" href="anamneseboegen.html">
                 Anamnesebögen
               </a>
             </li>
-            <a class="nav-link" href="kontakt.html">
+            <li>
+              <a class="nav-link" href="kontakt.html">
                 Kontakt
               </a>
             </li>
@@ -269,7 +269,7 @@
               Dein Termin in wenigen Schritten
             </h2>
             <p>
-              Wähle hier deine Behandlung und einen passenden Termin aus. Die Buchung bleibt direkt auf dieser Seite.
+              <span class="booking-desktop-description">Wähle hier deine Behandlung und einen passenden Termin aus. Die Buchung bleibt direkt auf dieser Seite.</span><span class="booking-mobile-description">Buche deinen Termin bequem über das sichere Buchungsportal von lemniscus.</span>
             </p>
           </div>
           <div class="booking-shell">
@@ -283,7 +283,10 @@
                 powered by lemniscus
               </span>
             </div>
-            <p class="booking-small-screen-hint">Auf einem sehr schmalen Bildschirm kannst du die Terminbuchung bei Bedarf seitlich verschieben.</p>
+            <div class="booking-mobile-cta">
+              <p>Wähle deine Behandlung und den passenden Termin. Das Buchungsportal ist für dein Smartphone optimiert.</p>
+              <a class="btn btn-primary btn-lg" href="https://my.lemniscus.de/pss.html?token=ea1f3260-634b-41db-aeab-2b932a20cb21">Termin bei lemniscus auswählen</a>
+            </div>
             <div class="booking-embed-scroll" role="region" aria-label="Online-Terminbuchung" tabindex="0">
               <div id="pss"></div>
             </div>
