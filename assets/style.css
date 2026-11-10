@@ -488,3 +488,173 @@
 .anamnesis-viewer{height:min(78vh,950px);min-height:520px;background:#e6e3dc;border:1px solid var(--line);border-radius:1rem;overflow:hidden}
 .anamnesis-viewer iframe{width:100%;height:100%;border:0}
 @media(max-width:767px){.anamnesis-card{padding:1.3rem}.anamnesis-viewer{display:none}}
+
+
+/* Responsive mobile rework: all overrides are restricted to the collapsed
+   navigation / mobile layouts. The desktop presentation remains unchanged. */
+.booking-mobile-cta,
+.booking-mobile-description{display:none}
+
+@media (max-width:991.98px){
+  /* Give the collapsed Bootstrap menu a dedicated row, even during animation. */
+  .navbar > .container{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    column-gap:.5rem;
+    min-width:0;
+  }
+  .navbar .navbar-brand{
+    flex:1 1 auto;
+    min-width:0;
+    max-width:calc(100% - 3.7rem);
+    margin-right:0;
+    gap:.55rem;
+  }
+  .navbar .navbar-brand > span:last-child{
+    min-width:0;
+    max-width:100%;
+  }
+  .navbar .brand-title{
+    font-size:clamp(.78rem,2.8vw,1.03rem);
+    line-height:1.22;
+    white-space:normal;
+    overflow-wrap:break-word;
+    hyphens:auto;
+  }
+  .navbar .navbar-toggler{
+    flex:0 0 auto;
+    margin-left:auto;
+    padding:.4rem .55rem;
+  }
+  .navbar .navbar-collapse{
+    flex-basis:100%;
+    width:100%;
+    min-width:0;
+  }
+  .navbar .navbar-nav{
+    flex-direction:column;
+    align-items:stretch;
+    width:100%;
+    gap:.1rem;
+    margin:.55rem 0 .35rem;
+    padding:0;
+  }
+  .navbar .navbar-nav > li{width:100%}
+  .navbar .nav-link{
+    display:block;
+    width:100%;
+    padding:.75rem .85rem!important;
+    border-radius:.7rem;
+  }
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active{background:var(--sand-light)}
+  .navbar .navbar-nav .btn{
+    display:block;
+    width:100%;
+    max-width:100%;
+    margin:.45rem 0 0!important;
+    text-align:center;
+    white-space:normal;
+  }
+}
+
+@media (max-width:767.98px){
+  /* Prevent document-level sideways scrolling; resolve actual content widths
+     below instead of shrinking the whole website/viewport. */
+  html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:clip;
+  }
+  body > main,main > section,main > header,body > footer,.navbar{
+    max-width:100%;
+    min-width:0;
+  }
+  .container, .section-head, .about-copy, .contact-card,
+  .content-card, .qualification-group, .anamnesis-card,
+  .treatment-card, .postpartum-copy, .postpartum-details{
+    min-width:0;
+    max-width:100%;
+  }
+  .navbar{min-height:68px}
+  .navbar .brand-mark{width:36px;height:36px;flex-basis:36px}
+  .navbar .brand-title{font-size:clamp(.78rem,3.3vw,.95rem)}
+  .navbar .navbar-toggler{padding:.35rem .5rem}
+  .navbar .navbar-toggler-icon{width:1.3em;height:1.3em}
+
+  .page-hero{padding:2.8rem 0 2.5rem}
+  .page-hero h1{font-size:clamp(2rem,8.5vw,2.7rem);line-height:1.12}
+  .page-content{padding:3rem 0}
+  .intro-copy{padding:2.4rem 0 1.75rem}
+  .intro h1{font-size:clamp(2.15rem,9vw,2.7rem)}
+  .hero-visual{height:min(86vw,340px)}
+  .quote-strip{padding:1.2rem 1rem;font-size:1.02rem;line-height:1.5}
+  .section-head h2{font-size:clamp(2rem,8vw,2.7rem)}
+  .section-head p{font-size:1rem}
+  .service-card{padding:1.35rem}
+  .about-copy h2{font-size:clamp(2rem,8vw,2.7rem)}
+  .content-card,.contact-card{padding:1.3rem}
+  .form-field, .contact-form{min-width:0}
+  .form-field input,.form-field textarea{max-width:100%;min-width:0}
+  h1,h2,h3,.eyebrow,.qualification,.contact-card,.legal,
+  .footer-links,.booking-help,.anamnesis-card{
+    overflow-wrap:break-word;
+  }
+  .treatment-inline-link{min-width:0;overflow-wrap:break-word}
+  .footer-main,.footer-bottom,.footer-links{max-width:100%;min-width:0}
+  .footer-links{gap:.7rem 1rem}
+  .footer-credit{min-width:0;flex-wrap:wrap}
+
+  /* Lemniscus officially needs 400px minimum width for its embedded UI.
+     Phones instead receive the provider's own mobile-friendly booking page,
+     without introducing any horizontally scrollable panel on this website. */
+  .booking-shell{width:100%;max-width:100%;margin-top:1.5rem}
+  .booking-top{flex-wrap:wrap;row-gap:.2rem;padding:.85rem 1rem}
+  .booking-embed-scroll,.booking-small-screen-hint,
+  .booking-desktop-description{display:none!important}
+  .booking-mobile-description{display:inline}
+  .booking-mobile-cta{
+    display:grid;
+    gap:1rem;
+    justify-items:stretch;
+    padding:1.5rem 1.15rem 1.6rem;
+    background:var(--paper);
+  }
+  .booking-mobile-cta p{
+    margin:0;
+    color:#62675f;
+    line-height:1.65;
+  }
+  .booking-mobile-cta .btn{
+    display:block;
+    width:100%;
+    max-width:100%;
+    padding:.9rem 1rem;
+    text-align:center;
+    white-space:normal;
+  }
+  .booking-help{padding:1rem 1.15rem}
+  .mobile-book{
+    left:max(12px,env(safe-area-inset-left));
+    right:max(12px,env(safe-area-inset-right));
+    bottom:max(12px,env(safe-area-inset-bottom));
+  }
+  .mobile-book a{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+}
+
+@media (max-width:359.98px){
+  .navbar .brand-mark{width:32px;height:32px;flex-basis:32px}
+  .navbar .brand-title{font-size:.76rem}
+  .navbar .navbar-brand{gap:.4rem}
+  .navbar .navbar-toggler{padding:.3rem .4rem}
+  .postpartum-copy{padding:1.65rem 1rem .75rem}
+  .postpartum-details{margin:.45rem .7rem .7rem;padding:1.5rem 1rem}
+  .treatment-card{padding:1.5rem 1rem 1.3rem}
+}
