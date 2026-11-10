@@ -784,3 +784,72 @@
   body:has(.navbar-collapse.collapsing) .mobile-book {display:none}
   body {padding-bottom:72px}
 }
+
+/* Navigation ohne Hamburger: Seitenlinks sind auch auf kleinen Screens sofort sichtbar. */
+@media (max-width:991.98px){
+  .navbar.sticky-top{position:relative!important;top:auto}
+  .navbar > .container{display:flex;flex-wrap:wrap;gap:0;min-width:0}
+  .navbar .navbar-brand{
+    flex:0 1 100%;
+    max-width:100%;
+    min-width:0;
+    margin:0;
+    padding:.6rem 0 .65rem;
+  }
+  .navbar .navbar-collapse{
+    display:block!important;
+    flex:0 0 100%;
+    width:100%;
+    max-width:100%;
+    padding:.45rem 0 .75rem;
+    border-top:1px solid var(--line);
+    overflow:visible;
+  }
+  .navbar .navbar-nav,
+  .navbar .navbar-collapse .navbar-nav{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:.35rem;
+    width:100%;
+    min-width:0;
+    margin:0!important;
+    padding:0;
+    align-items:stretch;
+  }
+  .navbar .navbar-nav > li{min-width:0;max-width:100%;width:100%}
+  .navbar .nav-link{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:43px;
+    padding:.55rem .4rem!important;
+    text-align:center;
+    font-size:.88rem;
+    line-height:1.25;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    hyphens:auto;
+    border:1px solid transparent;
+    border-radius:.65rem;
+  }
+  .navbar .nav-link.active{background:var(--sand-light);border-color:var(--line)}
+  .navbar .navbar-nav > li:last-child{grid-column:1/-1}
+  .navbar .navbar-nav > li:last-child .btn{
+    display:block;
+    max-width:100%;
+    width:100%;
+    margin:.1rem 0 0!important;
+    padding:.6rem 1rem;
+    text-align:center;
+  }
+}
+@media (max-width:767.98px){
+  .navbar .navbar-nav,
+  .navbar .navbar-collapse .navbar-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  /* Der vorhandene schwebende Terminbutton ersetzt die doppelte Nav-CTA. */
+  .navbar .navbar-nav > li:last-child{display:none}
+  .navbar .navbar-brand{padding:.6rem 0}
+  .navbar .nav-link{font-size:.88rem}
+}
