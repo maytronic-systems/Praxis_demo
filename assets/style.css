@@ -704,3 +704,83 @@
   .faq-cta .btn{max-width:100%;white-space:normal}
   .anamnesis-upload-tip{padding:.95rem 1rem}
 }
+
+/* Mobile polish: CTA, sticky booking, nav and readable text at phone widths */
+@media (max-width: 991.98px) {
+  /* Collapsed navigation stays inside the viewport. */
+  .navbar .navbar-collapse,
+  .navbar .navbar-nav,
+  .navbar .navbar-nav > li {min-width:0;max-width:100%}
+  .navbar .navbar-collapse .navbar-nav {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .navbar .navbar-nav .btn {box-sizing:border-box}
+}
+@media (max-width: 767.98px) {
+  /* Prevent pill buttons from breaking in half or flowing out of their cards. */
+  .intro-copy > .d-flex,
+  .faq-cta > .d-flex {
+    flex-direction:column;
+    flex-wrap:nowrap!important;
+    align-items:stretch;
+    gap:.7rem!important;
+  }
+  .intro-copy .btn,
+  .faq-cta .btn {
+    display:flex;
+    width:100%;
+    min-height:48px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    white-space:normal;
+    line-height:1.35;
+    overflow-wrap:break-word;
+  }
+  .faq-cta h2 {font-size:clamp(1.8rem,7.5vw,2.3rem);line-height:1.14}
+  .faq-cta p {margin-bottom:1.2rem}
+  .faq-cta .d-flex > * {min-width:0}
+  .booking-mobile-cta {min-width:0;padding:1.2rem 1rem 1.4rem}
+  .booking-mobile-cta .btn {
+    box-sizing:border-box;
+    min-width:0;
+    max-width:100%;
+    font-size:clamp(.9rem,3.8vw,1rem);
+    line-height:1.4;
+    padding:.9rem .7rem;
+    overflow-wrap:break-word;
+    hyphens:auto;
+    text-decoration:none;
+  }
+  .booking-mobile-cta p {font-size:1rem;line-height:1.6}
+  .booking-top .small {
+    flex-basis:100%;
+    margin-left:1.2rem!important;
+    font-size:.77rem;
+  }
+  .navbar .navbar-collapse {overflow-x:clip}
+  .navbar .navbar-toggler {border:1px solid var(--line);border-radius:.6rem}
+
+  /* Booking shortcut stays compact and disappears near actionable content. */
+  .mobile-book {
+    width:calc(100% - 1.5rem);
+    max-width:340px;
+    left:50%;
+    right:auto;
+    transform:translateX(-50%);
+    bottom:max(8px,env(safe-area-inset-bottom));
+  }
+  .mobile-book a {
+    min-height:44px;
+    padding:.58rem 1rem;
+    font-size:.91rem;
+    line-height:1.3;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+  }
+  .mobile-book.is-hidden,
+  body:has(.navbar-collapse.show) .mobile-book,
+  body:has(.navbar-collapse.collapsing) .mobile-book {display:none}
+  body {padding-bottom:72px}
+}
