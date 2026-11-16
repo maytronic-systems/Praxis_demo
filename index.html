@@ -12,16 +12,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <!-- Offizielle lemniscus my/OT-Einbettung: Buchungsdaten werden direkt bei lemniscus verarbeitet. -->
     <script type="text/javascript">
-      var pssConfig = {
+      window.pssConfig = {
         host: "https://my.lemniscus.de",
         token: "ea1f3260-634b-41db-aeab-2b932a20cb21",
         showMainVideoTeaser: false,
         showTermineTeaser: false,
         showFooter: false
       };
-      document.write("<script type='text/javascript' src='" + pssConfig.host +
-        "/lem/app.nocache-pss.js?v=" + Date.now() + "'><\/script>");
     </script>
+    <script type="text/javascript" src="https://my.lemniscus.de/lem/app.nocache-pss.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg sticky-top border-bottom">
